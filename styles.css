@@ -1,0 +1,1008 @@
+@font-face {
+    font-family: Pretender;
+    src: url(/fonts/pretender.regular.ttf);
+}
+  
+@font-face {
+    font-family: Futura;
+    src: url(/fonts/FuturaPTBook.otf);
+}
+  
+@import url("https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css");
+  
+body{
+    background-color: #ffffff;
+    background-image: url("/images/bg_svg_5pcopacity.svg");
+    background-attachment: fixed; 
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+}
+
+#body-content {
+    background-color: #ffffff;
+    background-image: url("/images/bg_svg_5pcopacity.svg");
+    background-attachment: fixed; 
+    background-position: center;
+    background-size: cover;
+    z-index: 3;
+}
+
+#body-container{
+    margin: 0;
+    padding: 0;
+}
+
+.div-container {
+    margin: 0;
+    padding: 0;
+}
+  
+  /*nav bar styling*/
+  
+nav {
+    background-color: #321A3D;
+    font-family: Futura;
+    font-size: 14pt;
+    padding: 0;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+  
+#wtclogo {
+    vertical-align:middle;
+    padding: 15px 0px 15px 0px;
+    margin:auto 15px auto 10px;
+    width: 6vw;
+}
+
+#wtclogo2 {
+    padding: 0;
+    margin:auto 15px auto 10px;
+    width: 130px;
+}
+  
+nav a {
+    color:#ffffff;
+    text-decoration: none;
+    padding: 15px;
+    transition: ease 0.5s;
+    position: relative;
+}
+  
+nav a:hover{
+    color:#321A3D;
+    background-color:#FFBC23;
+    top: 10px;
+}
+  
+#mainsitelink {
+    color: #FFBC23;
+    float: right;
+    vertical-align: middle;
+}
+  
+#mainsitelink:hover{
+    color:#321A3D;
+}
+   
+  /* body styling */
+  
+h1 {
+    font-family: Pretender;
+    text-align: center;
+    font-size: 130pt;
+    color:#321A3D;
+    margin: 0 0 0 0;
+}
+  
+h2{
+    font-family: Pretender;
+    text-align: center;
+    font-size: 80pt;
+    color: #321A3D;
+    margin: auto;
+    display: none;
+}
+
+
+p {
+    font-family: Futura;
+    padding: 30px 50px 30px 50px;
+    color: #321A3D;
+    font-size: 16pt;
+}
+
+#peoplebody1, #people2text, #planettext {
+    margin:auto;
+    width: 33vw;
+    text-align: justify;
+}
+
+/*---------- landing page */
+  
+  
+#landingpage {
+    height: 94vh;
+    width: 100vw;
+    z-index: -1;
+}
+ 
+/* ------------------- circletype styling*/
+
+/* circletype seems to only respond to font family in the body tag or the immediate div (the one CT links to in js) */
+
+#middlering {
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    animation: animate 220s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+#topring, #bottomring{
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    animation: animate2 220s linear infinite;
+}
+
+@keyframes animate2{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#topring {
+    font-size: 70pt;
+    font-family: Pretender;
+    color:#5a3d66;
+    top: -12%;
+    left: 85%;
+}
+
+#middlering {
+    font-size: 140pt;
+    font-family: Pretender;
+    color:#321A3D;
+    top: -6%;
+    left: 89%;
+}
+
+#bottomring {
+    font-size: 120pt;
+    font-family: Pretender;
+    color:#5a3d66;
+    top: 13%;
+    left: 89%;
+}
+
+#landingfloat {
+    position:absolute;
+    bottom: 10%;
+    left: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+#landingtext {
+    font-size: 20pt;
+    font-family: Pretender;
+    margin: 0;
+    padding: 0;
+}
+
+#landinglogo {
+    width: 20vw;
+    margin: 10px 0px 10px 0px;
+    padding: 0;
+}
+
+/* ------------------------- Start Div Splits here */
+  
+#plants1, #plants2, #people1, #people2, #planet1, #planet2 {
+    display: flex;
+    flex-direction: row;
+    min-height: 97vh;
+    width: 100vw;
+    margin: 0;
+    padding: 3vh 0vh 0vh 0vh;
+    overscroll-behavior: none;
+}
+
+#planet2{
+    padding: 0;
+    margin-bottom: 0;
+}
+    
+.plantdiv1, .plantdiv2, .peoplediv1, .peoplediv2, .peoplediv3, .planetdiv1, .planetdiv2 {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.plantdiv2 {
+    background-image: none;
+}
+
+.bodyimage {
+    height: 100vh;
+    width: 50vw;
+    display:flex;
+    object-fit:cover;
+}
+
+/* styling for the svg map*/
+.bodyimage2 {
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+circle {
+    fill: #fff;
+    stroke: #321A3D;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+circle:hover {
+    fill: #FFBC23;
+    stroke: #321A3D;
+    opacity: 0.5;
+    transform: scale(r=200);
+}
+
+#maplink1, #maplink2, #maplink3, #maplink4, #maplink5, #maplink6, #maplink7, #maplink8, #maplink9, #maplink10 {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: circleAni 30s linear infinite;
+}
+
+
+
+@keyframes circleAni{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+    
+/* ------------------------------- styling for top plant div */
+
+.plantdiv3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 94vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.plantflex {
+    width: 33%;
+    margin: 0;
+    padding: 0;
+}
+
+.plantflex img {
+    padding: 0px 10px 0px 10px;
+}
+
+#plantbodytext {
+    width: 30vw;
+}
+
+#plantbody2 h1 {
+    display: none;
+}
+
+#plant1insert1, #plant1insert2, #plant1insert3, #plant1insert4, #plant1insert5, #plant1insert6 {
+    display: none;
+}   
+
+#plant3img {
+    padding: 0;
+}
+  
+/* ------------------------------- drawers with image selection */
+
+.pplbusiness{
+    position: relative;
+    bottom: 0;
+    min-height: 55vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+.businessimg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    vertical-align: bottom;
+}
+  
+.businessimg img {
+    max-width: 7vw;
+    min-width: 3vw;
+    padding: 5px;
+    margin: auto auto auto auto;
+}
+
+/* ---------------------------------------------- drawer */
+.drawerdiv {
+    position: relative;
+    bottom: 0%;
+    min-height: 29vh;
+    margin: 0;
+    padding: 0;
+}  
+  
+/* ------------------------------------------ swipers */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+
+.swiper-slide img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  /* Styling for slide changes */
+
+#plant4insert1, #plant4insert2, #plant4insert3 {
+      display: none;
+}
+
+.mySwiper {
+    width: 75%;
+    height: 50%;
+}
+
+.mySwiper img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper2 {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper2 img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.mySwiper3 {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper3 img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper4 {
+    width: 75%;
+    height: 10%;
+}
+
+.mySwiper4 p {
+    margin: auto;
+    padding: 0;
+    color: #ffffff;
+    font-family: Futura;
+    font-size: 18pt;
+    font-weight: 700;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.mySwiper4 .swiper-slide {
+    background-color: #000000;
+}
+
+.mySwiper4 img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.mySwiper4 img:hover{
+    opacity: 0.8;
+}
+
+
+sl-drawer::part(panel) {
+    background-color: #321A3D;
+}
+  
+sl-drawer::part(overlay) {
+    visibility: hidden;
+}
+  
+sl-drawer::part(title) {
+    color: #FFBC23;
+    font-size: 24pt;
+    font-family: Pretender;
+}
+  
+sl-drawer::part(body) {
+    color: #ffffff;
+    font-family: Futura;
+}
+  
+sl-button[variant="primary"]::part(base), sl-button[variant="linkout"]::part(base) {
+    background-color: #FFBC23;
+    color:#321A3D;
+}
+  
+sl-button a{
+    color: #321A3D;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+sl-button {
+    color: #FFBC23;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+sl-button::part(base) {
+    background-color: #321A3D;
+    color:#FFBC23;
+    border:#321A3D 0px;
+}
+
+sl-button::part(base):hover {
+    background-color: #572d6b;
+    color:#FFBC23;
+    border: #321A3D 0px;
+}
+   
+.card-basic {
+    align-items: center;
+    max-width: 30%;
+    margin: 10px;
+    object-fit: cover;
+    --padding: 0;
+}
+
+/* ------------------------------------------------- split styling*/
+
+.splitend, .splitstart {
+    height: 94vh;
+}
+
+.split-panel-handle sl-split-panel {
+    --divider-width: 3px;
+}
+
+.split-panel-handle sl-split-panel::part(divider) {
+    background-color: #FFBC23;
+}
+
+.split-panel-handle sl-icon {
+    position: absolute;
+    border-radius: var(--sl-border-radius-small);
+    background: #FFBC23;
+    color: var(--sl-color-neutral-0);
+    padding: 0.5rem 0.125rem;
+}
+
+.split-panel-handle sl-split-panel::part(divider):focus-visible {
+    background-color: var(--sl-color-primary-600);
+}
+
+.split-panel-handle sl-split-panel:focus-within sl-icon {
+    background-color: var(--sl-color-primary-600);
+    color: var(--sl-color-neutral-0);
+}
+
+.split-container {
+    position: relative;
+    text-align: center;
+    color:#000000;
+    background-color: #ffffff;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+
+.split-container img{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    opacity: 70%;
+}
+
+.split-text-a {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    background-color: #ffffff;
+    margin: 0;
+    width: 200px;
+}
+
+.split-text-b {
+    position: absolute;
+    top: 30%;
+    right: 45%;
+    background-color: #ffffff;
+    margin: 0;
+    width: 200px;
+}
+
+h5{
+    font-size: 26pt;
+    font-family: Pretender;
+    text-align: center;
+    margin: 10px;
+    padding: 0px 5px 0px 5 px;
+}
+
+/* ------------------------------------- inserts */
+
+
+#textinsert1, #textinsert2, #textinsert3, #textinsert4 {
+    display: none;
+}
+
+.box {
+    flex: 1;
+    flex-direction: row;
+    height: 50vw;
+    width: 50vw;
+}
+
+/* ------------ footer */
+
+footer {
+    background-color: #321A3D;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+}
+
+#footerlogo {
+    display: block;
+    width: 10vw;
+    margin: auto;
+    padding: 3vh 0vh 0vh 0vh;
+}
+
+#acknowledgement {
+    width: 50%;
+    text-align: center;
+    margin: 1vh auto auto auto;
+    color: white;
+}
+
+
+@media screen and (max-width: 786px) {
+
+
+    #landingpage {
+        height: 96vh;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    /* ----------------- nav */
+
+    nav {
+        background-color: #321A3D;
+        font-family: Futura;
+        font-size: 14pt;
+        padding: 0;
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    
+    #wtclogo {
+        vertical-align:middle;
+        margin:auto 15px auto 10px;
+        width: 15vw;
+    }
+    
+    nav a {
+        color:#ffffff;
+        text-decoration: none;
+        padding: 15px;
+        transition: ease 0.5s;
+        position: relative;
+    }
+    
+    nav a:hover{
+        color:#321A3D;
+        background-color:#FFBC23;
+        top: 10px;
+    }
+    
+    #mainsitelink {
+        color: #FFBC23;
+        float: right;
+    }
+    
+    #mainsitelink:hover{
+        color:#321A3D;
+    }
+
+
+
+    /* ----------------------------- landing page*/
+
+    #topring {
+        top: -9%;
+        left: 200%;
+    }
+    
+    #middlering {
+        top: 0%;
+        left: 210%;
+    }
+    
+    #bottomring {
+        top: 15%;
+        left: 216%;
+    }
+    
+    #landingfloat {
+        position:absolute;
+        bottom: 10%;
+        left: 60%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #landingtext {
+        font-size: 24pt;
+        font-family: Pretender;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #landinglogo {
+        width: 28vw;
+        margin: 10px 0px 10px 0px;
+        padding: 0;
+    }
+
+    p {
+        font-size: 18pt;
+        padding: 0;
+        margin: 0;
+    }
+
+    #plant1text, #plant1textB, #plant1text2, #peoplebody1, #people2text, #planettext {
+        margin: 10px auto auto auto;
+        width: 75vw;
+        margin: 10px auto 10px auto;
+    }
+
+    #plants1, #people1, #people2, #planet1, #planet2 {
+        display: flex;
+        min-width: 100vw;
+        margin: 0;
+        padding: 0vh 0vh 0vh 0vh;
+        overscroll-behavior: none;
+    }    
+
+    #plants1 {
+        flex-direction: column;
+        min-height: 150vh;
+    }
+
+    .plantdiv3 {
+        flex-wrap: wrap;
+    }
+
+    #pb1{
+        width: 100vw;
+        height: 35vh;
+        margin: 0;
+        padding: 0;
+    }    
+    
+    #pb3{
+        width: 100vw;
+        height: 30vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    #pb2 {
+        width: 100vw;
+        height: 75vh;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+
+
+    /* ------------------------ styling for the svg map*/
+
+    .bodyimage2 {
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    p .plantflex {
+        font-size: 12pt;
+        width: 50vw;
+    }
+
+    h1 {
+        margin-top: 1vh;
+    }
+
+    #people1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 64vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0vh 0vh 0vh 0vh;
+        overscroll-behavior: none;
+    }
+
+    #people2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 50vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0vh 0vh 0vh 0vh;
+        overscroll-behavior: none;
+    }
+
+    .peoplediv2 {
+        min-height: 30vh;
+    }
+
+    .peoplediv1 {
+        min-height: 40vh;
+    } 
+    
+    .peoplediv3  {
+        min-height: 45vh;
+    }
+
+    /* --------- */
+
+    #planet1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 72vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0vh 0vh 0vh 0vh;
+        overscroll-behavior: none;
+    } 
+    
+    #planet2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 50vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0vh 0vh 0vh 0vh;
+        overscroll-behavior: none;
+    }
+    
+   .planetdiv1 {
+        min-height: 39vh;
+   }
+
+    .planetdiv2 {
+        min-height: 33vh;
+    }
+
+
+    .peoplediv1, .peoplediv2, .peoplediv3, .planetdiv1, .planetdiv2 {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+    }
+
+    /*---------- */
+
+
+    .bodyimage {
+        height: fit-content;
+        width: 100vw;
+        display:flex;
+        object-fit:cover;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    /*------------- swipers*/
+
+    .mySwiper2, .mySwiper3 {
+        width: 100vw;
+        height: 33vh;
+    }    
+
+    .mySwiper4 {
+        height: 7vh;
+        width: 90vw;
+    }
+
+
+
+    .pplbusiness {
+        width: 100vw;
+        min-height: 10vh;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+    }
+
+    .businessimg {
+        padding: 10px;
+    }
+
+    .businessimg img {
+        max-width: 13vw;
+        max-height: 50vh;
+        padding: 10px;
+    }
+
+    .drawerdiv {
+        min-height: 22vh;
+        font-size: 14pt;
+    }
+
+
+    sl-drawer::part(title) {
+        font-size: 26pt;
+    }
+
+    sl-drawer::part(panel) {
+        font-size: 18pt;
+        height: 100%;
+        width: 90%;
+    }
+
+    sl-drawer::part(footer) {
+        --footer-spacing: var(--sl-spacing-small);
+    }
+    sl-drawer::part(header) {
+        --footer-spacing: var(--sl-spacing-small);
+    }
+
+    sl-drawer::part(body) {
+        --footer-spacing: var(--sl-spacing-small);
+    }
+
+    sl-drawer::part(title) {
+        --footer-spacing: var(--sl-spacing-small);
+    }
+
+    button {
+        --footer-spacing: var(--sl-spacing-small);
+    }
+
+    /* ------------------------------ split */
+
+    #splitstart, #splitend {
+        height: 50vh;
+    }
+
+    .split-container {
+        text-align: center;
+        height: 50vh;
+    }
+
+    .split-container img{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        opacity: 70%;
+    }
+
+    .split-container p{
+        font-size: 12pt;
+        padding: 3px;
+    }
+
+    .split-container h5{
+        font-size: 20pt;
+        margin: auto;
+        padding: 5px 0px 20px 0px;
+    }
+
+    .split-text-a{
+        top: 20%;
+        left: 35%;
+        padding: 2px 0px 10px 0px;
+    }
+
+    .split-text-b{
+        top: 20%;
+        right: 35%;
+        padding: 2px 0px 10px 0px;
+    }
+
+    footer {
+        height: 15vh;
+    }
+
+    #footerlogo{
+        width: 15vw;
+    }
+
+    #acknowledgement {
+        font-size: 14pt;
+        width: 75%;
+        margin: auto;
+        padding: 0;
+    }   
+}
